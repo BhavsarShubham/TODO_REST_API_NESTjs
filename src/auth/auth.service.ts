@@ -1,17 +1,15 @@
 import { BadGatewayException, Injectable, NotFoundException } from '@nestjs/common';
 import { RegisterUserDto } from './dto/register.dto';
 import {LoginDto} from './dto/login.dto'
-import { DatabaseService } from '../database/database.service';
+import { DatabaseService } from 'src/database/database.service';
 import * as bcrypt from 'bcrypt'
 import { JwtService } from '@nestjs/jwt';
-
-
 @Injectable()
 export class AuthService {
   constructor(
     private readonly dataservice: DatabaseService,
-    private readonly jwtservice: JwtService,
-  ) {}
+    private readonly jwtservice: JwtService
+  ){}
 
   async login(loginData: LoginDto){
     const {email, password} = loginData;

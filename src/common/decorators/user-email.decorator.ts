@@ -5,7 +5,7 @@ export const UserEmail = createParamDecorator(
         const request = ctx.switchToHttp().getRequest();
         console.log("request")
         // console.log(request)
-        console.log(request.user2)
-        return request.user2.email;
+        console.log(request.user)
+        return request.user.email;
     }
 )

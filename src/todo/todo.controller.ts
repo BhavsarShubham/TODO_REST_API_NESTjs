@@ -7,7 +7,7 @@ import { UserEmail } from '../common/decorators/user-email.decorator';
 import { ApiBearerAuth, ApiOperation, ApiTags } from '@nestjs/swagger';
 
 
-@ApiTags('Todo2')
+@ApiTags('Todo')
 @Controller('todo')
 export class TodoController {
   constructor(private readonly todoService: TodoService) {}
